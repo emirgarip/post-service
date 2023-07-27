@@ -1,0 +1,29 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: post-service
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    initialization-mode: always
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+#  kafka:
+#    producer:
+#      # bootstrap-servers: localhost:9092
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#  sleuth:
+#    sampler:
+#      probability: 1.0
+application-description: Post Service App
+application-version: 1.0
+#  config:
+#    import: optional:configserver:http://localhost:8887
+#  cloud:
+#    config:
+#      profile: dev
